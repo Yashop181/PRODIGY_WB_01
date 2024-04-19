@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .nav-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  .nav-menu li {
+    margin-right: 20px;
+  }
+  
+  .nav-menu a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    padding: 10px 15px; /* Add padding for better clickability */
+    border-radius: 5px; /* Rounded corners */
+  }
+  
+  .nav-menu a:hover {
+    color: #ffcc00;
+    background-color: #555; /* Change background color on hover */
+    transform: scale(1.1); /* Scale the item on hover */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
+  }
+  
+  .menu-toggle {
+    display: none;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .nav-menu {
+      display: none;
+      flex-direction: column;
+      background-color: #fb0808;
+      position: absolute;
+      top: 50px;
+      left: 0;
+      width: 100%;
+      text-align: center; /* Center the menu items */
+    }
+  
+    .nav-menu.active {
+      display: flex;
+    }
+  
+    .menu-toggle {
+      display: block;
+      cursor: pointer;
+      color: #fff;
+      font-size: 24px;
+      margin-right: 10px;
+      text-align: right; /* Align the toggle icon to the right */
+    }
+  
+    .menu-toggle i {
+      margin-right: 10px; /* Add spacing between the icon and text */
+    }
+  }
+  
